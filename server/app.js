@@ -1,22 +1,13 @@
+require('dotenv').config();
 const express = require('express');
 
+
 const app = express();
-
-const mongoose =require('mongoose');
-
-const myDB='mongodb+srv://azhar:azhar@cluster0.atgjo.mongodb.net/mernstackbythapa?retryWrites=true&w=majority';
+const Port=process.env.PORT || 5000;
 
 
-mongoose.connect(myDB,{
-    useNewUrlParser:true,
-    useUnifiedTopology:true,
-    useCreateIndex:true,
-    useFindAndModify:false
-}).then(()=>{
-    console.log("sucessfully connected to database");
-}).catch(err=>{
-    console.log("connection to database failed",err);
-})
+
+require('./db/conn');
 
 
 app.get('/', (req,res)=>{
@@ -44,6 +35,6 @@ app.get('/signup',(req,res)=>{
 
 
 
-app.listen(3000,()=>{
-    console.log("listening on port 3000");
+app.listen(Port,()=>{
+    console.log(`listening on port ${Port}`);
 })
