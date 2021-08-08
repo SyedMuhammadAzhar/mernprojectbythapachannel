@@ -6,8 +6,13 @@ const app = express();
 const Port=process.env.PORT || 5000;
 
 
+app.use(express.json());
+
+
 
 require('./db/conn');
+
+app.use(require('./route/auth'));
 
 
 app.get('/', (req,res)=>{

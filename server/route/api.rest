@@ -1,0 +1,9 @@
+POST http://localhost:3000/registration
+Content-Type: application/json
+
+{
+    "name":"azhar",
+    "email":"syeazh143@gmail.com",
+    "phone":"03355228110",
+    "work":"nothing"
+}
