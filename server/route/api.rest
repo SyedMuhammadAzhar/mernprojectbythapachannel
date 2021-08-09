@@ -5,5 +5,9 @@ Content-Type: application/json
     "name":"azhar",
     "email":"syeazh143@gmail.com",
     "phone":"03355228110",
-    "work":"nothing"
+    "work":"nothing",
+    "password":"abc",
+    "cpassword":"abc",
+    "date":"nodate yet"
+    
 }

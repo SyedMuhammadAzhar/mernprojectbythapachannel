@@ -11,7 +11,7 @@ email:{
     required:true,
 },
 phone:{
-    type:Number,
+    type:String,
     required:true
 },
 work:{
@@ -28,13 +28,15 @@ cpassword:{
     required:true
 },
 date:{
-    type:Date,
-    default:Date.now
+    type:String
 }
+
 
 
 });
 
 
-const User = mongoose.model('USERS',userSchema);
+const User = mongoose.model('USER',userSchema);
+
+module.exports=User;
 
